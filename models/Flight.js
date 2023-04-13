@@ -6,6 +6,7 @@ const flightSchema = new mongoose.Schema({
     airline: String, 
     category: {
         type: String,
+        required: true,
         enum: ['American', 'Southwest', 'United']
     },
     flightNo: {
@@ -14,14 +15,14 @@ const flightSchema = new mongoose.Schema({
         min: 10,
         max: 9999
     },
-    departs: {
-        type: Date,
-        default: function(){
-            const oneYear = new Date();
-            oneYear.setFullYear(oneYear.getFullYear() + 1);
-            return oneYear;
-        }
-    }
+    // departs: {
+    //     type: Date,
+    //     default: function(){
+    //         const oneYear = new Date();
+    //         oneYear.setFullYear(oneYear.getFullYear() + 1);
+    //         return oneYear;
+    //     }
+    // }
 
 },
 {timestamps: true});

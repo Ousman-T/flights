@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const connectToDB = require('./config/db');
+const Flight = require('./models/Flight');
 
 
 //============ Configuring Engine
