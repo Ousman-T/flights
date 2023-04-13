@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 // Schema
 
 const flightSchema = new mongoose.Schema({
-    airline: String, 
-    category: {
+    airline: {
         type: String,
         required: true,
         enum: ['American', 'Southwest', 'United']

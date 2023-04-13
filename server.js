@@ -45,18 +45,13 @@ app.get('/flights/new', (req, res) => {
  * Post Method
  */
 app.post('/flights', (req, res) => {
+    console.log(req.body);
     Flight.create(req.body).then(flight => {
-        res.send(flight)
+        res.redirect('/flights')
     }).catch((error) => {
         console.error(error);
     });
 });
-
-
-
-
-
-
 
 
 

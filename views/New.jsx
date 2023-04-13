@@ -7,9 +7,9 @@ function New(){
             <form action='/flights' method='POST'>
                 Airline:<input type='text' name='airline'/>
                 <br />
-                Flight Number:<input type='text' name='Flight Number'/>
+                Flight Number:<input type='text' name='flightNo'/>
                 <br />
-                {/* Departs:<input type='text' name='Departs'/> */}
+                Departs:<input type='Date' name='departs'/>
                 <br />
                 <input type='submit' value='Book flight?' />
             </form>

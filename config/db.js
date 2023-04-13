@@ -9,9 +9,6 @@ module.exports = function(){
     mongoose.set('strictQuery', true)
     mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
 
-    setTimeout(() => {
-        db.close();
-    }, 5000);
     // listen for errors on connection
     db.on('error', (error) => console.error(error))
     db.on('open', () => console.log('Connected to MongoDB!'))

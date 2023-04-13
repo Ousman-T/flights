@@ -10,12 +10,12 @@ function Index(props){
             </nav>
             <h1>Flight Page Index</h1>
             <ul>
-                {flights.map((flights, i) => {
+                {flights.map((flight, i) => {
                     return(
-                        <li key={flights._id}>
-                            The <a href={`/flights/${flights._id}`}>{flights.airline}</a>
+                        <li key={flight._id}>
+                            The <a href={`/flights/${flight._id}`}>{flight.airline}</a>
                             {' '}flight number: {flight.flightNo}{'. '}
-                            {}
+                            {new Date(flight.departs).toLocaleDateString()}
                         </li>
                     )
                 })}
@@ -23,3 +23,5 @@ function Index(props){
         </div>
     )
 }
+
+module.exports = Index;
