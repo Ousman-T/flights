@@ -15,14 +15,10 @@ const flightSchema = new mongoose.Schema({
         min: 10,
         max: 9999
     },
-    // departs: {
-    //     type: Date,
-    //     default: function(){
-    //         const oneYear = new Date();
-    //         oneYear.setFullYear(oneYear.getFullYear() + 1);
-    //         return oneYear;
-    //     }
-    // }
+    departs: {
+        type: Date,
+        required: true
+    }
 
 },
 {timestamps: true});

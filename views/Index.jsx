@@ -14,6 +14,8 @@ function Index(props){
                     return(
                         <li key={flights._id}>
                             The <a href={`/flights/${flights._id}`}>{flights.airline}</a>
+                            {' '}flight number: {flight.flightNo}{'. '}
+                            {}
                         </li>
                     )
                 })}
