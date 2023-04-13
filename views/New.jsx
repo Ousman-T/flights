@@ -3,6 +3,9 @@ const React = require('react');
 function New(){
     return(
         <div>
+            <nav>
+                <a href='/flights'>View Flights</a>
+            </nav>
             <h1>New Page</h1>
             <form action='/flights' method='POST'>
                 Airline:<input type='text' name='airline'/>
